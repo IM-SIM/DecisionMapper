@@ -28,7 +28,7 @@ object Main extends App {
 
   val df = spark.read
     .option("header", "true")
-    .csv("D:\\Spark\\Stepik\\ScalaTinkoff\\Examples\\src\\main\\resources\\csvDataSet\\data.csv")
+    .csv("data.csv")
 
     df.show()
 /*
@@ -77,7 +77,7 @@ object Main extends App {
 
   val arguments = spark.read
     .option("multiline", "true")
-    .json("D:\\Spark\\Stepik\\ScalaTinkoff\\Examples\\src\\main\\resources\\csvDataSet\\arguments.json")
+    .json("arguments.json")
 
   arguments.show()
 
