@@ -2,9 +2,6 @@ package DecisionTest
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
-import spray.json.DefaultJsonProtocol.{jsonFormat3, jsonFormat2,lazyFormat, _}
-import spray.json.JsonFormat
-import spray.json._
 
 /**
  * Hello world!
@@ -21,6 +18,8 @@ object Main extends App {
       .appName("Csv table")
       .config("spark.master", "local")
       .getOrCreate()
+
+  import spark.implicits._
 
   /**
     * STEP 1
@@ -92,7 +91,7 @@ object Main extends App {
   */
 
 
-  val lst_columns_for_cast = arguments.collect.map(m => {
+  val lst_columns_for_cast = arguments.collect().map(m => {
     m.getAs[String]("date_expression") match {
       case null =>
     col(m.getAs[String]("existing_col_name"))
@@ -143,18 +142,24 @@ object Main extends App {
                       .groupBy(m)
                       .agg(sum("row_num").as("sum_row"))
 
-       val lst_ValCnt = sum_gb.collect().map(m2 => {
+       val lst_ValCnt = sum_gb.map(m2 => {
                 ValuesCount(m2.getAs(m).toString, m2.getAs[Long]("sum_row"))
-        }).toList
+        }).collect().toList
 
   ColUniqValue(m, sum_gb.count, lst_ValCnt)
   }
-  )
+  ).toList.toDS()
 
-  implicit val valuesCountFormat : JsonFormat[ValuesCount] = lazyFormat(jsonFormat2(ValuesCount.apply))
+lstUniqColumn.write.json("output")
+
+
+ /* val df_rez = lstUniqColumn.toDS()
+df_rez.write.json("output")*/
+
+ /* implicit val valuesCountFormat : JsonFormat[ValuesCount] = lazyFormat(jsonFormat2(ValuesCount.apply))
   implicit val colUniqValueFormat : JsonFormat[ColUniqValue] = lazyFormat(jsonFormat3(ColUniqValue.apply))
 
-  println(lstUniqColumn.toJson)
+  println(lstUniqColumn.toJson)*/
 
     /*[{"Column":"first_name","Unique_Values":2,"Values":[{"vals":"John Jonovich","cnt":1},{"vals":"Lisa","cnt":1}]},
     {"Column":"total_years","Unique_Values":1,"Values":[{"vals":"26","cnt":2}]},
