@@ -226,9 +226,6 @@
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-yarn-server-web-proxy:2.6.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-yarn-server-common:2.6.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-yarn-client:2.6.5" level="project" />
-    <orderEntry type="library" name="Maven: io.spray:spray-json_2.11:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: org.parboiled:parboiled-scala_2.11:1.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.parboiled:parboiled-core:1.1.6" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
   </component>
 </module>

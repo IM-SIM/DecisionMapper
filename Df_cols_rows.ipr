@@ -662,17 +662,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty/3.9.9.Final/netty-3.9.9.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: io.spray:spray-json_2.11:1.2.6">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/io/spray/spray-json_2.11/1.2.6/spray-json_2.11-1.2.6.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/io/spray/spray-json_2.11/1.2.6/spray-json_2.11-1.2.6-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/io/spray/spray-json_2.11/1.2.6/spray-json_2.11-1.2.6-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: javax.activation:activation:1.1.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1.1/activation-1.1.1.jar!/" />
@@ -2079,28 +2068,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.parboiled:parboiled-core:1.1.6">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.parboiled:parboiled-scala_2.11:1.1.6">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/parboiled/parboiled-scala_2.11/1.1.6/parboiled-scala_2.11-1.1.6.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/parboiled/parboiled-scala_2.11/1.1.6/parboiled-scala_2.11-1.1.6-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/parboiled/parboiled-scala_2.11/1.1.6/parboiled-scala_2.11-1.1.6-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.roaringbitmap:RoaringBitmap:0.5.11">
